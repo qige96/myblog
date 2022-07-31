@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-The last SRL theory I would like to introduce here is Stochasitc Logic Program (SLP). SLP  
+The last SRL theory I would like to introduce here is Stochasitc Logic Program[^1] (SLP). 
 
 Similar to Problog, Stochastic Logic Programs is also a probabilistic extesion of classic logic programs. However, SLP is different from Problog, in particular the semantics. So far, the probabilistic logic we had introduced are based on possible world semantics. That is, the probability value assigned to a proposition indicates "the probability of the proposition being true". While in SLP, the probability value assigned to a proposition indicates "the probability of a proposition being selected in one step of a proof". Therefore, we cannot directly apply SLP to our central question, but need some prepocessing jobs. 
 
@@ -47,7 +47,7 @@ where $Z = \sum_{r \in R(G)} \prod_{c \in r} p_c$ is just a normalising constant
 We know that the probabilities of SLP have different meanings of Problog, and other probabilistic logics introuced before. Then, where can we apply SLP? 
 
 
-Though the probabilities of clauses in a SLP are not saying the correctness or truth for that clause, we can derive those probabilities of this meaning. The key idea is to regard the body of a clause as an explanation of the head. For example, here is a simple SLP:
+Though the probabilities of clauses in a SLP are not saying the correctness or truth for that clause, we can derive those probabilities of this meaning. The key idea is to regard the body of a clause as an explanation of the head[^2]. For example, here is a simple SLP:
 
 ```prolog
 0.6:s(X) :- p(X).
@@ -104,4 +104,3 @@ $$
 [^2]: Chen, J., Muggleton, S. & Santos, J. *Learning probabilistic logic models from probabilistic examples*. Mach Learn 73, 55–85 (2008). [https://doi.org/10.1007/s10994-008-5076-4](https://doi.org/10.1007/s10994-008-5076-4)
 
 
-[^3]: Cussens, J. P*arameter Estimation in Stochastic Logic Programs.* Machine Learning 44, 245–271 (2001). [https://doi.org/10.1023/A:1010924021315](https://doi.org/10.1023/A:1010924021315)

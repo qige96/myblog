@@ -1,7 +1,7 @@
 ---
 title: "A Review of Probabilistic Logic: GOFPL - Bundy"
 date: 2022-07-31T20:44:42+01:00
-draft: true
+draft: false
 ---
 
 
@@ -124,4 +124,3 @@ In a later archival book written by Liu, an efficient algorithm was presented to
 
 [^1]; Bundy, A. (1985). Incidence calculus: a mechanism for probabilistic reasoning. *Journal of automated reasoning*, *1*(3), 263-283.
 
-[^2]: Liu, W. (2001). Propositional, Probabilistic and Evidential Reasoning: Integrating numerical and symbolic approaches. *Springer*.

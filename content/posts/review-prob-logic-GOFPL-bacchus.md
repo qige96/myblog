@@ -1,7 +1,7 @@
 ---
 title: "A Review of Probabilistic Logic: GOFPL - Bacchus"
 date: 2022-07-31T20:46:07+01:00
-draft: true
+draft: false
 ---
 
 

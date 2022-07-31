@@ -64,6 +64,5 @@ As other SRL theories, Problog can do more than answering the central question. 
 
 [^1]: D. Fierens, G. Van den Broeck, J. Renkens, D. Shterionov, B. Gutmann, I. Thon, G. Janssens and L. De Raedt. *Inference and learning in probabilistic logic programs using weighted Boolean formulas.* Theory and Practice of Logic Programming, 15:3, pp. 358 - 401, Cambridge University Press, 2015.
 
-[^2]: De Raedt, L., & Kimmig, A. (2015). Probabilistic (logic) programming concepts. *Machine Learning*, *100*(1), 5-47.
 
 

@@ -1,7 +1,7 @@
 ---
 title: "A Review of Probabilistic Logic: GOFPL - Nilsson"
 date: 2022-07-31T20:44:36+01:00
-draft: true
+draft: false
 ---
 
 
@@ -162,6 +162,5 @@ As we can see, the space of possible worlds surges exponentially as the number o
 
 [^1]: Nilsson, N. J. (1986). Probabilistic logic. *Artificial intelligence*, *28*(1), 71-87.
 
-[^2]: Nilsson, N. J. (1994). Probabilistic logic revisited. *Artificial intelligence*, *59*(1-2), 39-42.
 
 [^3]: Shakarian, P., Simari, G. I., Moores, G., Paulo, D., Parsons, S., Falappa, M. A., & Aleali, A. (2016). Belief revision in structured probabilistic argumentation. *Annals of Mathematics and Artificial Intelligence*, *78*(3), 259-301.
