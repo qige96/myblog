@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Blog of Ricky</title>
+    <link>https://qige96.github.io/myblog/posts/</link>
+    <description>Recent content in Posts on Blog of Ricky</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Jul 2022 00:27:00 +0100</lastBuildDate><atom:link href="https://qige96.github.io/myblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Explaining Probability Calibration</title>
+      <link>https://qige96.github.io/myblog/posts/explaining-probability-calibration/</link>
+      <pubDate>Sat, 30 Jul 2022 00:27:00 +0100</pubDate>
+      
+      <guid>https://qige96.github.io/myblog/posts/explaining-probability-calibration/</guid>
+      <description>This is a reading note explaining what probability calibration is, why we should use it, and how to achieve it. I will firstly introduce the origin of this notion, and then explain how to achieve probability calibration and why this can work. Lastly, I reveal the benefits of probability calibration.
+Philosophical Origin What is probability calibration? In a word, calibration means the forecast probabilities match the relative frequencies: $fr(X|pr(X)=\beta)=\beta$, where $fr(X)$ represents the relative frequency of $X$ and $pr(X)$ represents the predicted probability of $X$.</description>
+    </item>
+    
+    <item>
+      <title>5G Network Summary</title>
+      <link>https://qige96.github.io/myblog/posts/5g-network-summary/</link>
+      <pubDate>Tue, 26 Jul 2022 16:12:58 +0100</pubDate>
+      
+      <guid>https://qige96.github.io/myblog/posts/5g-network-summary/</guid>
+      <description>This note is a summary of some key points and comments to the description of 5G network architecture, which is defined by European Telecommunications Standards Institute. (ETSI).
+Network Architecture: Traditional versus Cloud Native We all know that a computer network is a group of inter-connected computers, among which computers could communicate with one another.
+Traditionally, we need some devices to facilitate the networking ability, typically switches and routers, which are THE two key devices for computer network to forward messages.</description>
+    </item>
+    
+  </channel>
+</rss>

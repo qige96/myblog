@@ -1,0 +1,29 @@
+baseURL = "https://qige96.github.io/myblog"
+canonifyurls = true
+languageCode = "en-us"
+title = "Blog of Ricky"
+theme = "yinyang"
+
+[markup]
+  defaultMarkdownHandler = 'pandoc'
+  [markup.asciidocExt]
+    backend = 'html5'
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', "^pandoc$"]
+
+[params]
+headTitle = "My Sketch Pad"
+mainSections = ["posts"]
+extraCSSFiles = ["css/extra.css"]
+postFooterContent = '<a rel=license href=http://creativecommons.org/licenses/by-nc-nd/4.0/><img alt="Creative Commons License" style=border-width:0 src=https://upload.wikimedia.org/wikipedia/commons/7/73/Cc_by-nc-nd_icon.svg></a>'
+
+extraHead = ''' 
+<script src="/js/mathjax-config.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css"> 
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+'''
