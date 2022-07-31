@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Pandoc
-        uses: maxheld83/pandoc-action@v2
+        uses: nikeee/setup-pandoc@v1
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
