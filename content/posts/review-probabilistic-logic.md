@@ -1,7 +1,7 @@
 ---
 title: "A Review of Probabilistic Logic: Preface"
 date: 2022-07-31T16:34:57+01:00
-draft: true
+draft: false
 ---
 
 # Introduction
