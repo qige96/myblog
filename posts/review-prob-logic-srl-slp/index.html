@@ -55,7 +55,7 @@ be organised as a proof tree. Below is an illusration using the above
 example SLP to prove the query <span class="math inline">\(s(X)\)</span>. In the tree, every path from the
 root node to a leaf node is a proof, whether successful or failed. Here,
 we examine the rightmost path: to prove <span class="math inline">\(s(X)\)</span>, selecting line, 6 we need to prove
-<span class="math inline">\(q(X)\)</span></p><figure><img src=images/SLP-tree.png alt="SLP tree"><figcaption aria-hidden=true>SLP tree</figcaption></figure><p>Formally, we say the successful proof, i.e., the path ended with
+<span class="math inline">\(q(X)\)</span></p><figure><img src=https://qige96.github.io/myblog/images/SLP-tree.png alt="SLP tree"><figcaption aria-hidden=true>SLP tree</figcaption></figure><p>Formally, we say the successful proof, i.e., the path ended with
 <span class="math inline">\(\square\)</span>, to be a refutation,
 denoted as <span class="math inline">\(r = \langle c_i, ..., c_j
 \rangle\)</span>, a sequence of selected clauses. Then, all the feasible
@@ -93,14 +93,14 @@ Pr[\neg p(b), q(b)|s(b)] = 0
 Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] =
 0.6*0.8=0.48
 \]</span></p><p><span class="math display">\[
-Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] =
-0.6*0.8=0.48
+Pr[\neg p(a), q(a), s(a)] = Pr[\neg p(a), q(a)| s(a)] * Pr[s(a)] =
+0.4*0.8=0.32
 \]</span></p><p><span class="math display">\[
-Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] =
-0.6*0.8=0.48
+Pr[p(a), \neg q(b), s(b)] = Pr[p(b), \neg q(b)| s(b)] * Pr[s(b)] =
+0.6*0.2=0.12
 \]</span></p><p><span class="math display">\[
-Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] =
-0.6*0.8=0.48
+Pr[\neg p(b), q(b), s(b)] = Pr[\neg p(b), q(b)| s(b)] * Pr[s(b)] =
+0.4*0.2=0.08
 \]</span></p><section class="footnotes footnotes-end-of-document" role=doc-endnotes><hr><ol><li id=fn1 role=doc-endnote><p>Cussens, J. <em>Parameter Estimation
 in Stochastic Logic Programs</em>. Machine Learning 44, 245–271 (2001).
 <a href=https://doi.org/10.1023/A:1010924021315>https://doi.org/10.1023/A:1010924021315</a><a href=#fnref1 class=footnote-back role=doc-backlink>↩︎</a></p></li><li id=fn2 role=doc-endnote><p>Chen, J., Muggleton, S. & Santos,
