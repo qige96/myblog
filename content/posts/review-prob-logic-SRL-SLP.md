@@ -32,7 +32,7 @@ This looks the same as our central question. But we should bear in mind that the
 
 To compute $Y$ is simple. We first prove the query $\psi$. There might be multiple feasible proofs. $Y$ is the sum of the probabilities of all the feasible proofs to $\psi$. One proof to $\psi$ is a sequence of selecting the applicable clauses in the SLP. Each selection is a stochastic choice according to the assigned probabilities. The probability of a proof is the product of the probabilities of these selections. All the proofs can be organised as a proof tree. Below is an illusration using the above example SLP to prove the query $s(X)$. In the tree, every path from the root node to a leaf node is a proof, whether successful or failed. Here, we examine the rightmost path: to prove $s(X)$, selecting line, 6 we need to prove $q(X)$
 
-![SLP tree](images/SLP-tree.png)
+![SLP tree](/images/SLP-tree.png)
 
 
 
@@ -86,15 +86,15 @@ Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] = 0.6*0.8=0.48
 $$
 
 $$
-Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] = 0.6*0.8=0.48
+Pr[\neg p(a),  q(a), s(a)] = Pr[\neg p(a),  q(a)| s(a)] * Pr[s(a)] = 0.4*0.8=0.32
 $$
 
 $$
-Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] = 0.6*0.8=0.48
+Pr[p(a), \neg q(b), s(b)] = Pr[p(b), \neg q(b)| s(b)] * Pr[s(b)] = 0.6*0.2=0.12
 $$
 
 $$
-Pr[p(a), \neg q(a), s(a)] = Pr[p(a), \neg q(a)| s(a)] * Pr[s(a)] = 0.6*0.8=0.48
+Pr[\neg p(b), q(b), s(b)] = Pr[\neg p(b), q(b)| s(b)] * Pr[s(b)] = 0.4*0.2=0.08
 $$
 
 
