@@ -1,7 +1,7 @@
 ---
 title: "A Review of Probabilistic Logic: SRL - MLN"
 date: 2022-07-31T22:17:26+01:00
-draft: true
+draft: false
 ---
 
 
