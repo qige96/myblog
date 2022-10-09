@@ -23,7 +23,7 @@ The combination of probability and (deductive) logic has long been a heated rese
 The central question of probabilistic logic can be formalised as: given the premises $\phi_1,\dots,\phi_n$and the corresponding sets of probabilities (mostly probability intervals), what would be the set of probabilities $Y$ for the conclusion $\psi$?
 
 $$
-\phi_1^{X_1},\dots,\phi_n^{X_n}|\\!\\!\\!\approx \psi^Y
+\phi_1^{X_1},\dots,\phi_n^{X_n}|\!\!\!\approx \psi^Y
 $$
 The key challenge of probabilistic reasoning is handling dependency relationships, so does probabilistic logic. That is, what is the correlation among probabilistic propositions $\{\phi_1, \phi_2, ..., \phi_n, \psi \}$? Below are two examples revealing this challenge.
 
@@ -47,8 +47,6 @@ $$
 $$
 Pr(\phi_ 5) = Pr(\phi_1 \land \phi_4) = Pr(\phi_1)*Pr(\phi_4) = 1*0.8 = 0.8
 $$
-
-
 
 By the basic laws of probability, we can see the calculation is valid only when we assumed that $\phi_1$and $\phi_4$ are independent, which can really simplify our calculation and make our life easier. The independent assumption of the above example is quite intuitive and reasonable, but there are cases where the independence assumption is unreasonable. 
 
