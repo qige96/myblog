@@ -70,11 +70,11 @@ Now we are given such 3 propositions, 7 equally probable incidences, and 2 incid
 
 $$
 \begin{align*}
-& \Phi = \\{rainy, sunny, windy\\} 
-\\\\& W = \\{mon, tue, wed, thu, fri, sat, sun\\} 
-\\\\& Pr(mon) = Pr(tue) = \dots =Pr(sun) = \frac{1}{7} 
-\\\\& i(rainy) = \\{fir, sat, sun, mon\\} 
-\\\\& i(windy) = \\{mon, wed, fri\\}
+& \Phi = \{rainy, sunny, windy\} \\
+& W = \{mon, tue, wed, thu, fri, sat, sun\} \\
+& Pr(mon) = Pr(tue) = \dots =Pr(sun) = \frac{1}{7} \\
+& i(rainy) = \{fir, sat, sun, mon\} \\
+& i(windy) = \{mon, wed, fri\}\\
 \end{align*}
 $$
 
@@ -82,8 +82,8 @@ The question is, what are the probabilities of the following 2 propositions:
 
 $$
 \begin{align*}
-& \varphi_1 = \neg windy \land rainy 
-\\\\& \varphi_2=(sunny \lor windy) \land \neg rainy
+& \varphi_1 = \neg windy \land rainy \\
+& \varphi_2=(sunny \lor windy) \land \neg rainy \\
 \end{align*}
 $$
 
@@ -92,20 +92,20 @@ Using Incidence Calculus to compute the probabilities of a proposition, we shall
 $$
 \begin{align*}
 i(\varphi_1) &= i(\neg windy) \cap i(rainy) 
-\\\\ &= W \backslash i(windy) \cap i(rainy) 
-\\\\ &= \{tue, thu, sat, sun\} \cap \{thu,sat,sun,mon\} 
-\\\\ &= \{sat, sun\} \\ Pr(\varphi_1) 
-\\\\&= Pr(sat)+Pr(sun) = \frac{2}{7}
+\\ &= W \backslash i(windy) \cap i(rainy) 
+\\ &= \{tue, thu, sat, sun\} \cap \{thu,sat,sun,mon\} 
+\\ &= \{sat, sun\} \\ 
+Pr(\varphi_1) &= Pr(sat)+Pr(sun) = \frac{2}{7}
 \end{align*}
 $$
 
 It is easy to work with $\varphi_1$, but for $\varphi_2$, things become more tricky because we don't know the exact incidence assignment of$windy$. Thus, we can only find the lower and upper bounds of $\varphi_2$. The lower bound is
 
 $$
-i_*(\varphi_2) = \cup_{\psi \in \mathcal{L}(\mathcal{A})} \\{i(\psi)|\psi \vDash \varphi_2\\}= \\{wed\\}
+i_*(\varphi_2) = \cup_{\psi \in \mathcal{L}(\mathcal{A})} \{i(\psi)|\psi \vDash \varphi_2\}= \{wed\}
 $$
 
-as only $windy \land \neg rainy$ can entail $\varphi_2$, and $i(windy \land \neg rainy) = \\{wed\\}$.
+as only $windy \land \neg rainy$ can entail $\varphi_2$, and $i(windy \land \neg rainy) = \{wed\}$.
 
 The upper bound is 
 
