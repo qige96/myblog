@@ -1,5 +1,5 @@
 ---
-title: "Review Prob Logic NeSy Intro"
+title: "A Review of Probabilistic Logic: NeSy - Intro"
 date: 2022-08-25T15:30:42+01:00
 draft: false
 ---
