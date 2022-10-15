@@ -1,7 +1,7 @@
 ---
 title: "Review Prob Logic NeSy LNN"
 date: 2022-10-09T15:01:31+01:00
-draft: true
+draft: false
 ---
 
 
