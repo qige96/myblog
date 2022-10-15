@@ -32,10 +32,10 @@ w\}\cap\{w|\phi_2 \in w\}} Pr(w)\)</span></li><li>we can set up a linear equatio
 between probabilities of premises and conclusions.</li></ul><p><strong>Example 1.1</strong></p><p>We walk through Nilsson’s idea by an example shown in his original
 paper. Consider the below 3 sentences:</p><p><span class="math display">\[
 \begin{align*}
-& \phi_1 = P
-\\\\& \phi_2 = P \Rightarrow Q
-\\\\& \phi_3 = Q\end{align*}
-\]</span></p><p>The problem is, what is <span class="math inline">\(Pr(\phi_3)\)</span>, given <span class="math inline">\(\{\phi_1, \phi_2\} \vDash\phi_3\)</span></p><p>Now we have 3 propositions, and we don’t know exactly their truth
+& \phi_1 = P \\
+& \phi_2 = P \Rightarrow Q \\
+& \phi_3 = Q\end{align*}
+\]</span></p><p>The problem is, what is <span class="math inline">\(Pr(\phi_3)\)</span>, given <span class="math inline">\(Pr(\phi_1), Pr(\phi_2)\)</span>?</p><p>Now we have 3 propositions, and we don’t know exactly their truth
 values. But we can enumerate all the possible truth assignments for
 them. At the first glance, each proposition can be assigned True or
 False, so that should be <span class="math inline">\(2^3 = 8\)</span>
@@ -55,56 +55,56 @@ Pr(\phi_3) = Pr(w_1) + Pr(w_3)
 minimum of <span class="math inline">\(Pr(\phi_3)\)</span>, which is a
 standard linear programming problem. For notational simplicity, I use
 <span class="math inline">\(x_i\)</span> to denote <span class="math inline">\(Pr(w_i)\)</span>:</p><p><span class="math display">\[
-\begin{align*}max (min) \\ & Pr(\phi_3) = x_1 + x_3
-\\\\s.t.
-\\\\& Pr(\phi_1) = x_1 + x_2
-\\\\& Pr(\phi_2) = x_1 + x_3 + x_4
-\\\\& \sum_{i \in [1,4]} x_i = 1
+\begin{align*}max (min) \ & Pr(\phi_3) = x_1 + x_3 \\
+s.t. \\
+& Pr(\phi_1) = x_1 + x_2 \\
+& Pr(\phi_2) = x_1 + x_3 + x_4 \\
+& \sum_{i \in [1,4]} x_i = 1
 \end{align*}
 \]</span></p><p>In this example, we don’t know the values of <span class="math inline">\(Pr(\phi_1)\)</span> and <span class="math inline">\(Pr(\phi_2)\)</span>. But we can still establish
 the relation between the <span class="math inline">\(Pr(\phi_1)\)</span>, <span class="math inline">\(Pr(\phi_2)\)</span> and <span class="math inline">\(Pr(\phi_3)\)</span>. By converting the linear
 program into a linear equation system:</p><p><span class="math display">\[
 \begin{bmatrix}1
-\\\\ Pr(\phi_1)
-\\\\ Pr(\phi_2)
+\\ Pr(\phi_1)
+\\ Pr(\phi_2)
 \end{bmatrix} =
 \begin{bmatrix} 1 & 1 & 1 & 1
-\\\\ 1 & 1 & 0 & 0
-\\\\ 1 & 0 & 1 & 1
-\\\\ 1 & 0 & 1 & 0
+\\ 1 & 1 & 0 & 0
+\\ 1 & 0 & 1 & 1
+\\ 1 & 0 & 1 & 0
 \end{bmatrix}
 \begin{bmatrix}
 x_1
-\\\\ x_2
-\\\\ x_3
-\\\\ x_4
+\\ x_2
+\\ x_3
+\\ x_4
 \end{bmatrix}
 \]</span></p><p>and solving this equation system, we have:</p><p><span class="math display">\[
 Pr(\phi_3) = 0.5Pr(\phi_1) + Pr(\phi_2) - 0.5
 \]</span></p><p><strong>Example 1.2</strong></p><p>Now we demonstrate a more practical example borrowed from this
 paper<a href=#fn2 class=footnote-ref id=fnref2 role=doc-noteref><sup>2</sup></a>.</p><p><span class="math display">\[
 \begin{align*}&\phi_1 = A
-\\\\& \phi_2 = B
-\\\\& \phi_3 = C
-\\\\& \phi_4 = A \lor C
+\\& \phi_2 = B
+\\& \phi_3 = C
+\\& \phi_4 = A \lor C
 \end{align*}
 \]</span></p><p>What’s more, we have</p><p><span class="math display">\[
 \begin{align*}
 Pr(\phi_1) \in [0.7, 0.9]
-\\\\ Pr(\phi_2) \in [0.1, 0.3]
-\\\\ Pr(\phi_3) \in [0.7, 0.9]
+\\ Pr(\phi_2) \in [0.1, 0.3]
+\\ Pr(\phi_3) \in [0.7, 0.9]
 \end{align*}
 \]</span></p><p>The question is, what is <span class="math inline">\(Pr(\phi_4)\)</span> ? As what we did in Example 1,
 we find out all the possible worlds of the 4 sentences:</p><table><thead><tr class=header><th style=text-align:left><span class="math inline">\(A\)</span></th><th style=text-align:left><span class="math inline">\(B\)</span></th><th style=text-align:left><span class="math inline">\(C\)</span></th><th style=text-align:left><span class="math inline">\(A \lor
 C\)</span></th><th style=text-align:left>Possible World</th></tr></thead><tbody><tr class=odd><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>1</td></tr><tr class=even><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left></td></tr><tr class=odd><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>2</td></tr><tr class=even><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left></td></tr><tr class=odd><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>3</td></tr><tr class=even><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left></td></tr><tr class=odd><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>4</td></tr><tr class=even><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left></td></tr><tr class=odd><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>5</td></tr><tr class=even><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left></td></tr><tr class=odd><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left></td></tr><tr class=even><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>6</td></tr><tr class=odd><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>T</td><td style=text-align:left>7</td></tr><tr class=even><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left>F</td><td style=text-align:left></td></tr><tr class=odd><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>T</td><td style=text-align:left></td></tr><tr class=even><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>F</td><td style=text-align:left>8</td></tr></tbody></table><p>We can see that there are 8 possible worlds and <span class="math inline">\(\phi_4\)</span> is true in 6 of them. Thus, we can
 set up a linear program. For notational simplicity, I use <span class="math inline">\(x_i\)</span> to denote <span class="math inline">\(Pr(w_i)\)</span>:</p><p><span class="math display">\[
 \begin{align*}
-max(min) \\ &Pr(\phi_4) = x_1 +x_2 + x_3 + x_4 + x_5 + x_7
-\\\\s.t.
-\\\\& 0.7 \le x_1 + x_2 + x_3 + x_4 \le 0.9
-\\\\& 0.1 \le x_1 + x_2 + x_5 + x_6 \le 0.3
-\\\\& 0.7 \le x_1 + x_3 + x_5 + x_7 \le 0.9
-\\\\& \sum_{i \in [1,8]} x_i = 1
+max(min) \ &Pr(\phi_4) = x_1 +x_2 + x_3 + x_4 + x_5 + x_7
+\\s.t.
+\\& 0.7 \le x_1 + x_2 + x_3 + x_4 \le 0.9
+\\& 0.1 \le x_1 + x_2 + x_5 + x_6 \le 0.3
+\\& 0.7 \le x_1 + x_3 + x_5 + x_7 \le 0.9
+\\& \sum_{i \in [1,8]} x_i = 1
 \end{align*}
 \]</span></p><p>Solving this linear program, we have <span class="math inline">\(Pr(\phi_4) = [0.8, 1.0]\)</span></p><p>As we can see, the space of possible worlds surges exponentially as
 the number of sentences increases, so the time and space complexity of
