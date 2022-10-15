@@ -25,12 +25,12 @@ We walk through Nilsson's idea by an example shown in his original paper. Consid
 
 $$
 \begin{align*}
-& \phi_1 = P 
-\\\\& \phi_2 = P \Rightarrow Q 
-\\\\& \phi_3 = Q\end{align*}
+& \phi_1 = P \\
+& \phi_2 = P \Rightarrow Q \\
+& \phi_3 = Q\end{align*}
 $$
 
-The problem is, what is $Pr(\phi_3)$, given $\{\phi_1, \phi_2\} \vDash\phi_3$
+The problem is, what is $Pr(\phi_3)$, given $Pr(\phi_1), Pr(\phi_2)$?
 
 Now we have 3 propositions, and we don't know exactly their truth values. But we can enumerate all the possible truth assignments for them. At the first glance, each proposition can be assigned True or False, so that should be $2^3 = 8$ possible worlds. However, some of the truth assignments are impossible (inconsistent). For example, when $\phi_1$ and $\phi_2$ are both true, it is impossible for $\phi_3$ to be false. Therefore, actually, we have only 4 possible worlds (details shown in the below sematic table). 
 
@@ -65,11 +65,11 @@ $$
 Now, the problem can be transformed into finding the maximum and minimum of $Pr(\phi_3)$, which is a standard linear programming problem. For notational simplicity, I use $x_i$ to denote $Pr(w_i)$:
 
 $$
-\begin{align*}max (min) \\ & Pr(\phi_3) = x_1 + x_3 
-\\\\s.t. 
-\\\\& Pr(\phi_1) = x_1 + x_2 
-\\\\& Pr(\phi_2) = x_1 + x_3 + x_4 
-\\\\& \sum_{i \in [1,4]} x_i = 1
+\begin{align*}max (min) \ & Pr(\phi_3) = x_1 + x_3 \\
+s.t. \\
+& Pr(\phi_1) = x_1 + x_2 \\
+& Pr(\phi_2) = x_1 + x_3 + x_4 \\
+& \sum_{i \in [1,4]} x_i = 1
 \end{align*}
 $$
 
@@ -77,19 +77,19 @@ In this example, we don't know the values of $Pr(\phi_1)$ and $Pr(\phi_2)$. But
 
 $$
 \begin{bmatrix}1 
-\\\\ Pr(\phi_1)  
-\\\\ Pr(\phi_2)   
+\\ Pr(\phi_1)  
+\\ Pr(\phi_2)   
 \end{bmatrix}  =
 \begin{bmatrix} 1 & 1 & 1 & 1 
-\\\\ 1 & 1 & 0 & 0 
-\\\\ 1 & 0 & 1 & 1 
-\\\\ 1 & 0 & 1 & 0
+\\ 1 & 1 & 0 & 0 
+\\ 1 & 0 & 1 & 1 
+\\ 1 & 0 & 1 & 0
 \end{bmatrix}  
 \begin{bmatrix}
 x_1
-\\\\ x_2
-\\\\ x_3
-\\\\ x_4
+\\ x_2
+\\ x_3
+\\ x_4
 \end{bmatrix}
 $$
 
@@ -105,9 +105,9 @@ Now we demonstrate a more practical example borrowed from this paper[^3].
 
 $$
 \begin{align*}&\phi_1 = A 
-\\\\& \phi_2 = B 
-\\\\& \phi_3 = C 
-\\\\& \phi_4 = A \lor C
+\\& \phi_2 = B 
+\\& \phi_3 = C 
+\\& \phi_4 = A \lor C
 \end{align*}
 $$
 
@@ -116,8 +116,8 @@ What's more, we have
 $$
 \begin{align*}
 Pr(\phi_1) \in [0.7, 0.9] 
-\\\\ Pr(\phi_2) \in [0.1, 0.3] 
-\\\\ Pr(\phi_3) \in [0.7, 0.9] 
+\\ Pr(\phi_2) \in [0.1, 0.3] 
+\\ Pr(\phi_3) \in [0.7, 0.9] 
 \end{align*}
 $$
 
@@ -146,12 +146,12 @@ We can see that there are 8 possible worlds and $\phi_4$ is true in 6 of them. T
 
 $$
 \begin{align*}
-max(min) \\ &Pr(\phi_4) = x_1 +x_2 + x_3 + x_4 + x_5 + x_7 
-\\\\s.t. 
-\\\\& 0.7 \le x_1 + x_2 + x_3 + x_4 \le 0.9 
-\\\\& 0.1 \le x_1 + x_2 + x_5 + x_6 \le 0.3 
-\\\\& 0.7 \le x_1 + x_3 + x_5 + x_7 \le 0.9 
-\\\\& \sum_{i \in [1,8]} x_i = 1
+max(min) \ &Pr(\phi_4) = x_1 +x_2 + x_3 + x_4 + x_5 + x_7 
+\\s.t. 
+\\& 0.7 \le x_1 + x_2 + x_3 + x_4 \le 0.9 
+\\& 0.1 \le x_1 + x_2 + x_5 + x_6 \le 0.3 
+\\& 0.7 \le x_1 + x_3 + x_5 + x_7 \le 0.9 
+\\& \sum_{i \in [1,8]} x_i = 1
 \end{align*}
 $$
 

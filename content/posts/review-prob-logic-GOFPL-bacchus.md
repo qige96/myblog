@@ -107,27 +107,52 @@ A proof system is used to determine whether a formula is true or false. It shoul
 *First-order Axioms*
 
 $$
-\begin{align}\alpha \rightarrow \beta \rightarrow\alpha \\(\alpha \rightarrow \beta \rightarrow \delta) \rightarrow (\alpha \rightarrow \beta) \rightarrow \alpha \rightarrow \delta \\(\neg\alpha \rightarrow \beta) \rightarrow (\neg\alpha \rightarrow \neg\beta) \rightarrow \alpha \\\forall{x}.(\alpha \rightarrow \beta) \rightarrow \forall{x}.\alpha \rightarrow \forall{x}.\beta \\\forall{x}.\alpha \rightarrow \alpha(x/t) \\t = t \\t_1 = t_{n+1} \rightarrow \dots \rightarrow t_n = t_{2n} \rightarrow ft_1...t_n = ft_{n+1}...t_{2n} \\t_1 = t_{n+1} \rightarrow \dots \rightarrow t_n = t_{2n} \rightarrow Pt_1...t_n = Pt_{n+1}...t_{2n}\end{align}
+\begin{align}
+\alpha \rightarrow \beta \rightarrow\alpha \\
+(\alpha \rightarrow \beta \rightarrow \delta) \rightarrow (\alpha \rightarrow \beta) \rightarrow \alpha \rightarrow \delta \\
+(\neg\alpha \rightarrow \beta) \rightarrow (\neg\alpha \rightarrow \neg\beta) \rightarrow \alpha \\
+\forall{x}.(\alpha \rightarrow \beta) \rightarrow \forall{x}.\alpha \rightarrow \forall{x}.\beta \\
+\forall{x}.\alpha \rightarrow \alpha(x/t) \\
+t = t \\t_1 = t_{n+1} \rightarrow \dots \rightarrow t_n = t_{2n} \rightarrow ft_1...t_n = ft_{n+1}...t_{2n} \\
+t_1 = t_{n+1} \rightarrow \dots \rightarrow t_n = t_{2n} \rightarrow Pt_1...t_n = Pt_{n+1}...t_{2n}\end{align}
 $$
 
 *Field Axioms*
 
 $$
 \begin{align*}
-x+(y+z) = (x+y)+z \\x+0 = x \\x+(-1 * x) = 0 \\x+y=y+x\\x*(y*z) = (x*y)*z\\x*1=x\\x \neq 0 \rightarrow \exists{y}.(y*x=1)\\x*y=y*x\\x*(y+z) = x*y+x*z\\\neg (1=0)\\\neg (x<x)\\x<y \rightarrow (y<z \rightarrow x<z)\\x<y \lor x = y \lor y < z\\x<y \rightarrow x+z < y+z\\0 < x \rightarrow (0<y \rightarrow 0<x*y)\\
+x+(y+z) = (x+y)+z \\
+x+0 = x \\
+x+(-1 * x) = 0 \\
+x+y=y+x \\
+x*(y*z) = (x*y)*z \\ 
+x*1=x \\
+x \neq 0 \rightarrow \exists{y}.(y*x=1)\\x*y=y*x \\
+x*(y+z) = x*y+x*z \\
+\neg (1=0)\\ 
+\neg (x<x)\\ 
+x<y \rightarrow (y<z \rightarrow x<z) \\ 
+x<y \lor x = y \lor y < z\\x<y \rightarrow x+z < y+z\\
+0 < x \rightarrow (0<y \rightarrow 0<x*y)\\
 \end{align*}
 $$
 
 *Probability Axioms*
 
 $$
-\begin{align*}prob(\alpha) \ge 0 \\prob(\alpha) + prob(\neg\alpha) = 1 \\prob(\alpha \land \beta) + prob(\alpha \land \neg\beta) = prob(\alpha) \\\alpha \rightarrow prob(\alpha) = 1\\\forall{x}.prob(\alpha) = 1 \rightarrow prob(\forall{x}.\alpha) = 1\end{align*}
+\begin{align*}prob(\alpha) \ge 0 \\
+prob(\alpha) + prob(\neg\alpha) = 1 \\
+prob(\alpha \land \beta) + prob(\alpha \land \neg\beta) = prob(\alpha) \\
+\alpha \rightarrow prob(\alpha) = 1\\
+\forall{x}.prob(\alpha) = 1 \rightarrow prob(\forall{x}.\alpha) = 1\end{align*}
 $$
 
 *Rules of Inference*
 
 $$
-\begin{align*}\{\alpha, \alpha \rightarrow \beta\} \vdash \beta \\\alpha \vdash \forall{x}.\alpha \\\alpha = \beta  \vdash prob(\alpha) = prob(\beta)\end{align*}
+\begin{align*}\{\alpha, \alpha \rightarrow \beta\} \vdash \beta \\
+\alpha \vdash \forall{x}.\alpha \\
+\alpha = \beta  \vdash prob(\alpha) = prob(\beta)\end{align*}
 $$
 
 The presented proof system is sound but not complete, meaning that every proven formula is valid, but not all valid formulas can be proved by this system. In fact, no complete proof theory exists for Lp.

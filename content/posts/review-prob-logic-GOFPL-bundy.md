@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-In the last section, we saw Nilsson proposed his probabilistic logic by assigning probabilities to possible worlds, and then assigning possible worlds to propositions. Therefore, identifying dependency relationships among propositions can be reduced to set operations of possible worlds. Nearly meanwhile, Alan Bundy leveraged the same idea to design his mechanism for probabilistic reasoning: Incidence Calculus. Here the term "incidence" is Bundy's name for the possible world. In fact, the first formal paper on  Incidence Calculus was published in 1985, even one year ahead of Nilsson's formal paper on Probabilistic Logic. 
+In the last section, we saw Nilsson proposed his probabilistic logic by assigning probabilities to possible worlds, and then assigning possible worlds to propositions. Therefore, identifying dependency relationships among propositions can be reduced to set operations of possible worlds. Nearly meanwhile, Alan Bundy leveraged the same idea to design his mechanism for probabilistic reasoning: Incidence Calculus. Here the term "incidence" is Bundy's name for the possible world. In fact, the first formal paper on  Incidence Calculus was published in 1985[^1], even one year ahead of Nilsson's formal paper on Probabilistic Logic. 
 
 The subtle difference between Incidence Calculus and Probabilistic Logic is that Probabilistic Logic only uses probabilities of possible worlds $Pr(w)$ as placeholders to set up a linear program, and doesn't care about the exact value of the probabilities. Incidence Calculus cares more about the exact probabilities of possible worlds. When using Incidence Calculus, we want to know how many incidences are used, what are the probabilities of each incidence, and what incidences are assigned to which propositions. With this information, we can easily work out the probabilities of a conclusion given the probabilistic premises.
 
@@ -27,9 +27,9 @@ and we have the following basic relations of propositions and their possible wor
 
 $$
 \begin{align*}&i(\neg\phi) = W \backslash i(\phi) 
-\\\\&i(\phi_1 \land \phi_2) = i(\phi_1) \cap i(\phi_2) 
-\\\\&i(\phi_1 \lor \phi_2) = i(\phi_1) \cup i(\phi_2) 
-\\\\&i(T) = W \\&i(F) = \emptyset\end{align*}
+\\&i(\phi_1 \land \phi_2) = i(\phi_1) \cap i(\phi_2) 
+\\&i(\phi_1 \lor \phi_2) = i(\phi_1) \cup i(\phi_2) 
+\\&i(T) = W \\&i(F) = \emptyset\end{align*}
 $$
 
 The probability of a proposition is the sum of probabilities of its supporting incidences:
@@ -110,10 +110,10 @@ as only $windy \land \neg rainy$ can entail $\varphi_2$, and $i(windy \land \ne
 The upper bound is 
 
 $$
-i^*(\varphi_2) = \cap_{\psi \in \mathcal{L}(\mathcal{A})} \\{i(\psi)|\varphi_2 \vDash \psi\\}= \\{tue, wed, thu\\} \\
+i^*(\varphi_2) = \cap_{\psi \in \mathcal{L}(\mathcal{A})} \{i(\psi)|\varphi_2 \vDash \psi\}= \{tue, wed, thu\} \
 $$
 
-as only $\neg rainy$ can be entailed from $\varphi_2$, and $i(\neg rainy) = \\{tue, wed, thu\\}$
+as only $\neg rainy$ can be entailed from $\varphi_2$, and $i(\neg rainy) = \{tue, wed, thu\}$
 
 However, another practical problem comes. Our elegant approach asks for incidences of propositions $i(\phi)$, and the exact probabilities of incidences $Pr(w)$. However, in most cases, we only know the probabilities assigned directly to some propositions $Pr(\phi)$, but know neither the incidences of propositions, nor the probabilities of incidences. How can we carry on with such situations? Well, we have to assign incidences to propositions and find a probability measure that can reproduce the original probabilities. This procedure is called incidence assignment.
 
@@ -121,6 +121,5 @@ In Bundy's original paper, no formal algorithm is given on how to automatically 
 
 In a later archival book written by Liu, an efficient algorithm was presented to solve this problem. The authors first generalized the Incidence Calculus and come up with the notion of *basic incidence assignment*. Then, it was shown that for one set of probabilistic propositions, there is one and only one basic incidence assignment. From this basic incidence assignment, we can subsume all other valid incidence assignments.
 
-
-[^1]; Bundy, A. (1985). Incidence calculus: a mechanism for probabilistic reasoning. *Journal of automated reasoning*, *1*(3), 263-283.
+[^1]: Bundy, A. (1985). Incidence calculus: a mechanism for probabilistic reasoning. *Journal of automated reasoning*, *1*(3), 263-283.
 
